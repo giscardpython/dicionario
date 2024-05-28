@@ -1,86 +1,40 @@
+
+Nome = input('\nInforme o nome da pessoa: ')
+Cpf  = int(input('\nInforme o CPF: '))
+Rg   = int(input('\nInforme o RG: '))
+DataNasc = input('\nInforme a Data de Nascimento: ')
+Genero = input('\nInforme o Gênero: ')
+Email = input('\nInforme o E-mail: ')
+Telefone = input('\nInforme o Telefone: ')
+TipoSanguineo = input('\nInforme o Tipo Sanguineo: ')
+Profissao = input('\nInforme a Profissão: ')
+Empresa = input('\nInforme a Empresa: ')
+
 # dicionário
 pessoa = {
-'nome':'Alex Machado',
-'idade':39,
-'profissao':'programador',
-'empresa':'SENAI'
+'nome': Nome,
+'cpf': Cpf,
+'rg': Rg,
+'datanasc': DataNasc,
+'genero': Genero,
+'email': Email,
+'telefone': Telefone,
+'tiposanguineo':TipoSanguineo,
+'profissao':Profissao,
+'empresa':Empresa
 }
-print(pessoa)
 
-# coleções
-colecao1 = ['Fulano','Cicrano','Beltrano']
-colecao2 = ('Brasília','São Paulo','Rio de Janeiro')
-colecao3 = {'Nome':'Fulano de Tal', 'Profissao':'Programador', 'Genero':'Masculino'}
-# verificando os tipos de coleções
-print(type(colecao1))
-print(type(colecao2))
-print(type(colecao3))
+print("Dados da Pessoa:\n")
 
-# FORMA 1
-pessoa = {
-'nome':'Alex Machado',
-'idade':39,
-'profissao':'programador',
-'empresa':'SENAI'
-}
-# exibindo os dados do dicionário
 print(pessoa['nome'])
-print(pessoa['idade'])
+print(pessoa['cpf'])
+print(pessoa['rg'])
+print(pessoa['datanasc'])
+print(pessoa['genero'])
+print(pessoa['email'])
+print(pessoa['telefone'])
+print(pessoa['tiposanguineo'])
 print(pessoa['profissao'])
 print(pessoa['empresa'])
 
-pessoa = {
-'nome':'Alex Machado',
-'idade':39,
-'profissao':'programador',
-'empresa':'SENAI'
-}
-try:
-    print(pessoa['cidade'])
-except:
-    print('Dados inexistentes')
 
-# FORMA 2
-pessoa = {
-'nome':'Alex Machado',
-'idade':39,
-'profissao':'programador',
-'empresa':'SENAI'
-}
-print(pessoa.get('nome'))
-print(pessoa.get('idade'))
-print(pessoa.get('profissao'))
-print(pessoa.get('empresa'))
-print(pessoa.get('cidade'))
-
-# ADICIONANDO NOVA CHAVE
-pessoa = {
-'nome':'Alex Machado',
-'idade':39,
-'profissao':'programador',
-'empresa':'SENAI'
-}
-# adicionando uma nova chave ao dicionário
-pessoa['cidade'] = 'Brasília'
-# exibindo os dados do dicionário
-print(pessoa.get('nome'))
-print(pessoa.get('idade'))
-print(pessoa.get('profissao'))
-print(pessoa.get('empresa'))
-print(pessoa.get('cidade'))
-
-# ADICIONANDO VIA INPUT
-pessoa = {
-'nome':'Alex Machado',
-'idade':39,
-'profissao':'programador',
-'empresa':'SENAI'
-}
-# adicionando uma nova chave ao dicionário
-pessoa['cidade'] = input('Informe o nome da cidade: ')
-# exibindo os dados do dicionário
-print(pessoa.get('nome'))
-print(pessoa.get('idade'))
-print(pessoa.get('profissao'))
-print(pessoa.get('empresa'))
-print(pessoa.get('cidade'))
