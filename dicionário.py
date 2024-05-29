@@ -1,3 +1,4 @@
+import os
 
 Nome = input('\nInforme o nome da pessoa: ')
 Cpf  = int(input('\nInforme o CPF: '))
@@ -12,30 +13,22 @@ Empresa = input('\nInforme a Empresa: ')
 
 # dicionário
 pessoa = {
-'nome': Nome,
-'cpf': Cpf,
-'rg': Rg,
-'datanasc': DataNasc,
-'genero': Genero,
-'email': Email,
-'telefone': Telefone,
-'tiposanguineo':TipoSanguineo,
-'profissao':Profissao,
-'empresa':Empresa
+'Nome': Nome,
+'CPF': Cpf,
+'RG': Rg,
+'Data Nascimento': DataNasc,
+'Gênero': Genero,
+'E-mail': Email,
+'Telefone': Telefone,
+'Tipo Sanguíneo':TipoSanguineo,
+'Profissão':Profissao,
+'Empresa':Empresa
 }
+
+os.system('cls')
 
 print("Dados da Pessoa:\n")
 
-print('Nome: ')
-print(pessoa['nome'])
-print(pessoa['cpf'])
-print(pessoa['rg'])
-print(pessoa['datanasc'])
-print(pessoa['genero'])
-print(pessoa['email'])
-print(pessoa['telefone'])
-print(pessoa['tiposanguineo'])
-print(pessoa['profissao'])
-print(pessoa['empresa'])
-
+for chave in pessoa:
+    print(f'{chave}: {pessoa.get(chave)}')
 
